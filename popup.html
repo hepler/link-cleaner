@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Clean This Link!</title>
+<style>
+    body {
+        width: 310px;
+        height: 105px;
+        background-color: #dedede;
+        overflow-x: hidden;
+        padding: 5px;
+    }
+
+    #source {
+        width: 300px;
+        height: 30px;
+        resize: none;
+    }
+
+    #submit {
+        margin: 10px 0;
+        width: 305px;
+        height: 40px;
+    }
+
+    button {
+        position: relative;
+        vertical-align: top;
+        padding: 0;
+        font-size: 14px;
+        color: #197519;
+        text-align: center;
+        background: #99C299;
+        border: 2px solid #197519;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #66A366;
+    }
+
+}
+
+</style>
+
+<script src="popup.js"></script>
+</head>
+
+<body>
+
+    <textarea id="source" label="Enter your link"></textarea>
+    <button onclick="cleanLink()" id="submit"> Clean this Link </button>
+
+    <div id="result">
+    </div>
+
+</body>
+</html>
