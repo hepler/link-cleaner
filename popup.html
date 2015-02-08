@@ -11,10 +11,15 @@
         padding: 5px;
     }
 
-    #source {
+    #input {
         width: 300px;
         height: 30px;
         resize: none;
+    }
+
+    #cleaned-link {
+        padding: 5px;
+        width: 95%;
     }
 
     #submit {
@@ -38,7 +43,6 @@
     button:hover {
         background-color: #66A366;
     }
-
 }
 
 </style>
@@ -48,11 +52,10 @@
 
 <body>
 
-    <textarea id="source" label="Enter your link"></textarea>
-    <button onclick="cleanLink()" id="submit"> Clean this Link </button>
+    <textarea id="input" label="Enter your link"></textarea>
+    <button id="submit">Clean this Link</button>
 
-    <div id="result">
-    </div>
+    <div id="cleaned-link"></div>
 
 </body>
 </html>

@@ -2,7 +2,7 @@
   "name": "Link Cleaner",
   "version": "1.0",
   "manifest_version": 2,
-  "description": "Link cleaning",
+  "description": "Cleaning URL encoding and removing tracking prefixes",
 
   "browser_action": {
     "default_icon": "icon.png",
