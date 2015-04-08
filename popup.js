@@ -4,15 +4,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function cleanLink() {
-    // get the user's input and clean it up
+    // get the user's input and clean it up, remove everything up to the link
     var input = document.getElementById('input').value;
-    var link = decodeURIComponent((input+'').replace(/\+/g, '%20'));
+    var link = input.replace(/^(.*?)%2F%2F/,'');
+    link = decodeURIComponent((link+'').replace(/\+/g, '%20'));
 
-    // remove relate iq tracking prefix from beginning of link
-    var rel_iq = 'https://app.relateiq.com/r?url=';
-    link = link.replace(rel_iq,'');
-    
     // add it to the popup as a clickable link
-    link = "<a target='_blank' href='" + link + "\'>" + link + "<a>";
-    document.getElementById('cleaned-link').innerHTML = link;
+    var newLink = "<a target='_blank' href='https://" + link + "\'> Cleaned Link <a>";
+    document.getElementById('cleaned-link').innerHTML = newLink;
 }
