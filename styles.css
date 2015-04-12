@@ -1,41 +1,48 @@
 body {
-    width: 310px;
-    height: 110px;
+    width: 300px;
+    height: 0;
     background-color: #dedede;
     overflow-x: hidden;
     padding: 5px;
 }
 
 #input {
-    width: 300px;
+    width: 290px;
     height: 30px;
     resize: none;
-}
-
-#cleaned-link {
-    padding: 5px;
-    width: 95%;
-    text-align: center;
-}
-
-#submit {
-    margin: 10px 0;
-    width: 305px;
-    height: 40px;
 }
 
 button {
     position: relative;
     vertical-align: top;
     padding: 0;
+    border: 2px solid;
+
+    margin: 10px 0;
+    width: 49%;
+    height: 40px;
+
     font-size: 14px;
-    color: #197519;
     text-align: center;
-    background: #99C299;
-    border: 2px solid #197519;
     cursor: pointer;
 }
 
-button:hover {
+#normal {
+    background: #99C299;
+    border-color: #197519;
+    color: #197519;
+}
+
+#normal:hover {
     background-color: #66A366;
+}
+
+#incog {
+    background: #D1B2F0;
+    border-color: #5200A3;
+    color: #5200A3;
+}
+
+#incog:hover {
+    background-color: #944DDB;
 }
