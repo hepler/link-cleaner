@@ -19,9 +19,13 @@ function openIncog() {
     chrome.windows.create({'url': link, 'incognito': true});
 }
 
-// get the user's input and clean it up, remove everything up to the link
+// get the user's input and clean it up.
+// remove everything up through the protocol, then
+// remove all the extras after base URL
 function cleanLink(input) {
     var link = input.replace(/^(.*?)%2F%2F/,'');
+    link = link.replace(/&.*$/,"");
+    // now clean up the encoded URL pieces
     link = 'https://' + decodeURIComponent((link+'').replace(/\+/g, '%20'));
     return link;
 }
