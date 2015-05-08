@@ -1,16 +1,18 @@
 # link-cleaner
 
-a chrome extension for cleaning up url encoding from copied links
+A chrome extension for cleaning up URL tracking/encoding from copied links.
 
-working, but just running in dev mode currently
+Working, but only running in dev mode currently.
 
 
 #### using this extension
 
-for example, a "dirty" link is pasted into the popup's text box:
+For example, a "dirty" link is pasted into the popup's text box:
 
-`https://app.relateiq.com/r?url=https%3A%2F%2Fwww.example.com`
+`https://app.relateiq.com/r?url=https%3A%2F%2Fwww.example.com&t=L1t90izWCIKYbtgxXE89t-FwhZf2L`
 
-the extenstion cleans up the encoded URL and removes the tracking prefix, outputting the much friendlier:
+The extension cleans up the encoded URL and removes the tracking info, outputting the much friendlier:
 
 `https://www.example.com`
+
+which can then be opened in either a normal tab or incognito window in one click.
