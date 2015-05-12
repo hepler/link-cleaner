@@ -22,10 +22,20 @@ function openIncog() {
 // get the user's input and clean it up.
 // remove everything up through the protocol, then
 // remove all the extras after base URL
-function cleanLink(input) {
-    var link = input.replace(/^(.*?)%2F%2F/,'');
-    link = link.replace(/&.*$/,"");
-    // now clean up the encoded URL pieces
-    link = 'https://' + decodeURIComponent((link+'').replace(/\+/g, '%20'));
+function cleanLink(link) {
+    // if it's a rel iq link
+    if(link.indexOf('relate') > 0) {
+        link = link.replace(/^(.*?)%2F%2F/,'');
+        link = link.replace(/&.*$/,'');
+        // now clean up the encoded URL pieces and remove junk at the end
+        link = 'https://' + decodeURIComponent(link.replace(/\+/g, '%20'));
+        link = link.substring(0, link.indexOf('&t'));
+    }
+    // take off any UTM codes at the end
+    if(link.indexOf('?utm') > 0) {
+        link = link.substring(0, link.indexOf('?utm'));
+    }
     return link;
+
+
 }
