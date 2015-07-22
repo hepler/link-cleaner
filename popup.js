@@ -29,13 +29,10 @@ function cleanLink(link) {
         link = link.replace(/&.*$/,'');
         // now clean up the encoded URL pieces and remove junk at the end
         link = 'https://' + decodeURIComponent(link.replace(/\+/g, '%20'));
-        // link = link.substring(0, link.indexOf('&t'));
     }
     // take off any UTM codes at the end
     if(link.indexOf('?utm') > 0) {
         link = link.substring(0, link.indexOf('?utm'));
     }
     return link;
-
-
 }
